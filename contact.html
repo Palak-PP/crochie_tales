@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Crochie Tales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-item {
+            position: relative;
+            padding: 10px 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transform: scale(1.1);
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-pink-400 to-orange-300 shadow-md py-4 rounded-b-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold text-white">Crochie Tales</h1>
+            <nav>
+                <ul class="flex space-x-6 text-white font-semibold">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                     
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-pink-600 mb-8">Get in Touch</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Form -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded mb-4" required>
+                    <input type="email" placeholder="Your Email" class="w-full p-3 border rounded mb-4" required>
+                    <textarea placeholder="Your Message" class="w-full p-3 border rounded mb-4 h-32" required></textarea>
+                    <button type="submit" class="bg-pink-500 text-white px-6 py-3 rounded-lg hover:bg-pink-600 transition w-full">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Store Info -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Our Store</h3>
+                <p><strong>📍 Address:</strong> 123 Crochet Street, Mumbai, India</p>
+                <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+                <p><strong>📧 Email:</strong> support@crochietales.com</p>
+                
+                <!-- Google Map -->
+                <div class="mt-4">
+                    <iframe class="w-full h-48 rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8509073311335!2d72.87765521539949!3d19.076090387093254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aadb3a07b%3A0x55f5e7f1ad5ef1eb!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1645762069072!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white text-center py-4 mt-10">
+        <p>© 2025 Crochie Tales. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact Form Handling -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you! Your message has been sent.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>

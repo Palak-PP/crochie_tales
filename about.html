@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Crochie Tales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-item {
+            position: relative;
+            padding: 10px 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transform: scale(1.1);
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-pink-400 to-orange-300 shadow-md py-4 rounded-b-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold text-white">Crochie Tales</h1>
+            <nav>
+                <ul class="flex space-x-6 text-white font-semibold">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[800px] flex items-center justify-center text-center text-white" style="background-image: url('logo.webp');">
+        <div class="bg-gradient-to-t from-pink-700 to-transparent p-10 rounded-2xl shadow-lg">
+            <h2 class="text-4xl font-bold">Our Story</h2>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold text-pink-600 mb-6">Handmade with Love</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+            At Crochie Tales, we believe in the beauty of handcrafted products. Our journey began with a passion for crochet artistry, 
+            and today we bring unique, high-quality handmade crochet pieces to life. Each piece tells a story, woven with love and care.
+        </p>
+        <div class="mt-8">
+            <img src="p.webp" alt="Crafting Process" class="w-full max-w-2xl mx-auto rounded-lg shadow-md">
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-pink-600 mb-8">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="founder.jpg" alt="Founder" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md">
+                <h3 class="text-xl font-semibold">unkown</h3>
+                <p class="text-gray-600">Founder & Designer</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="artisan.jpg" alt="Lead Artisan" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md">
+                <h3 class="text-xl font-semibold">unkown</h3>
+                <p class="text-gray-600">Lead Artisan</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="marketing.jpg" alt="Marketing Head" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md">
+                <h3 class="text-xl font-semibold">unkown</h3>
+                <p class="text-gray-600">Marketing Head</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white text-center py-4 mt-10">
+        <p>© 2025 Crochie Tales. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
